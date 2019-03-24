@@ -556,7 +556,7 @@ function send(sendObject) {
     url: "/send",
     contentType: "application/json",
     type: "POST",
-    data: JSON.stringify({ "events": [sendObject] }),
+    data: JSON.stringify({ "events": [sendObject], "destination": "bot" }),
     success: function () {
     },
     error: function (xhr, ajaxOptions, thrownError) {
