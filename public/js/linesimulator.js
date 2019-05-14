@@ -117,6 +117,7 @@
 //#region settings
 
 var userId = "";
+var groupId = "";
 function setSettings() {
   pocMode = false;
   let userIdInput = $("#userId")[0];
@@ -571,8 +572,9 @@ function sendTextMessage(text, displayOnly) {
     "type": "message",
     "timestamp": 1462629479859,
     "source": {
-      "type": "user",
-      "userId": userId
+      "type": "group",
+      "userId": userId,
+      "groupId": groupId
     },
     "message": {
       "id": generateMessageId(),
@@ -594,8 +596,9 @@ function sendPostback(postback, params) {
     "type": "postback",
     "timestamp": 1462629479859,
     "source": {
-      "type": "user",
-      "userId": userId
+      "type": "group",
+      "userId": userId,
+      "groupId": groupId
     },
     "postback": {
       "data": postback,
@@ -613,8 +616,9 @@ function sendSticker() {
     "type": "message",
     "timestamp": 1462629479859,
     "source": {
-      "type": "user",
-      "userId": userId
+      "type": "group",
+      "userId": userId,
+      "groupId": groupId
     },
     "message": {
       "id": generateMessageId(),
@@ -634,8 +638,9 @@ function sendAddress() {
     "type": "message",
     "timestamp": 1462629479859,
     "source": {
-      "type": "user",
-      "userId": userId
+      "type": "group",
+      "userId": userId,
+      "groupId": groupId
     },
     "message": {
       "id": generateMessageId(),
