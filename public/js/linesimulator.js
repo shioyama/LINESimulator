@@ -575,7 +575,7 @@ function sendTextMessage(text, displayOnly) {
       "userId": userId
     },
     "message": {
-      "id": "325708",
+      "id": generateMessageId(),
       "type": "text",
       "text": text
     }
@@ -617,7 +617,7 @@ function sendSticker() {
       "userId": userId
     },
     "message": {
-      "id": "325708",
+      "id": generateMessageId(),
       "type": "sticker",
       "packageId": $('#packageId')[0].value,
       "stickerId": $('#stickerId')[0].value
@@ -638,7 +638,7 @@ function sendAddress() {
       "userId": userId
     },
     "message": {
-      "id": "325708",
+      "id": generateMessageId(),
       "type": "location",
       "title": $('#title')[0].value,
       "address": $('#address')[0].value,
@@ -1459,5 +1459,9 @@ function loadJson() {
 
   // Read in the image file as a data URL.
   reader.readAsDataURL($('#loadJsonFile')[0].files[0]);
+}
+
+function generateMessageId() {
+  return Math.floor((Math.random() * 100000) + 1);
 }
 //#endregion
