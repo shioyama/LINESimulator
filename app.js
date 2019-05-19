@@ -91,8 +91,9 @@ app.post('/upload', function (req, res) {
         "type": "message",
         "timestamp": 1462629479859,
         "source": {
-            "type": "user",
-            "userId": req.body.userId
+            "type": "group",
+            "userId": req.body.userId,
+            "groupId": req.body.groupId
         },
         "message": {
             "id": contentId,

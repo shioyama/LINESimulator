@@ -527,7 +527,7 @@ function uploadFile() {
   reader.onload = function (event) {
     $("#filename")[0].value = "";
     let result = event.target.result;
-    var sendObject = { "filename": filename, "userId": userId, "base64string": result };
+    var sendObject = { "filename": filename, "userId": userId, "groupId": groupId, "base64string": result };
 
     $.ajax({
       url: "/upload",
