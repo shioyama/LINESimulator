@@ -102,7 +102,7 @@ app.post('/upload', function (req, res) {
     };
 
     if (pocMode === "false") {
-        var jsonData = JSON.stringify({ "events": [sendObject] });
+        var jsonData = JSON.stringify({ "events": [sendObject], "destination": "bot" });
         var signature = crypto.createHmac("SHA256", channelSecret)
             .update(jsonData)
             .digest().toString('base64');
